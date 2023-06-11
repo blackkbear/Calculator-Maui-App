@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadoraRm.MainPage">
+
+    <ScrollView>
+        <Border
+            BackgroundColor="White"
+            >
+            <Grid BackgroundColor="#0a0a0a" 
+              Padding="10" 
+              ColumnSpacing="4.5" 
+              RowSpacing="4.5">
+            <Grid.RowDefinitions>
+                <!--filas de 5-->
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+               <!-- columas de 4-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                <Label 
+                
+                x:Name="result"
+                Text="0"
+                
+                TextColor="FloralWhite"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.ColumnSpan="4"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                FontSize="75"
+                FontFamily="digital"
+                
+                    />
+                <!-- boton para limpiar -->
+                <Button
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Text="C"
+                    TextColor="LightGray"
+                    FontAttributes="Bold"
+                    Clicked="ClearButton"
+                    FontSize="45"
+                    BackgroundColor="#494949"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+                <!-- botones para numeros -->
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="7"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="8"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Text="9"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Text="4"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="5"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Text="6"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Text="1"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Text="2"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    Text="3"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3"
+                    Text="0"
+                    TextColor="#39FF14"
+                    FontAttributes="Bold"
+                    Clicked="SelectNumber"
+                    FontSize="40"
+                    BackgroundColor="#1f1f1f"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+            
+            <!-- botones para operaciones -->
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Text="÷"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Clicked="Button_Clicked"
+                    FontSize="45"
+                    BackgroundColor="#39FF14"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Text="×"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Clicked="Button_Clicked"
+                    FontSize="45"
+                    BackgroundColor="#39FF14"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Text="−"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Clicked="Button_Clicked"
+                    FontSize="50"
+                    BackgroundColor="#39FF14"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="3"
+                    Text="+"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Clicked="Button_Clicked"
+                    FontSize="55"
+                    BackgroundColor="#39FF14"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+                <!--- boton para ver total -->
+                <Button
+                    Grid.Row="5"
+                    Grid.Column="3"
+                    Text="="
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Clicked="CalculateOperation"
+                    FontSize="55"
+                    BackgroundColor="#FF6700"
+                    CornerRadius="35"
+                    FontFamily="digital"
+
+                />
+
+            </Grid>
+        </Border>    
+
+    </ScrollView>
+
+</ContentPage>
